@@ -5,6 +5,10 @@
   "description": "Shared Traders Launch design tokens (colors, fonts, gradients, tailwind helpers).",
   "sideEffects": ["*.css"],
   "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Traders-Launch/design-tokens.git"
+  },
   "exports": {
     ".": "./index.js",
     "./tailwind": "./tailwind.js",

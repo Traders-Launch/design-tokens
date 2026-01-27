@@ -4,7 +4,13 @@ Shared colors, typography, and gradients for TL web properties.
 
 ## Install
 
-Use a local file dependency while iterating:
+Recommended (GitHub tag):
+
+```bash
+npm install --save "github:Traders-Launch/design-tokens#v0.1.0"
+```
+
+Local iteration (file dependency):
 
 ```bash
 npm install --save "file:../../design-tokens"
@@ -40,7 +46,8 @@ import { TL_COLORS, TL_FONT, TL_GRADIENTS } from "@traderslaunch/design-tokens";
 
 ## Release
 
-- `npm run release:patch` (or `release:minor` / `release:major`)
-- Consumers run `npm install` to pick up the new version.
+1) Run `npm run release:patch` (or `release:minor` / `release:major`).
+2) Push tags: `git push --follow-tags`.
+3) GitHub Actions will create a release from the tag.
 
-If you plan to publish to a registry, remove `private` (if added) and configure `publishConfig`.
+Consumers then bump the tag in `package.json` and run `npm install`.
