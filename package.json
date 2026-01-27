@@ -1,0 +1,25 @@
+{
+  "name": "@traderslaunch/design-tokens",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Shared Traders Launch design tokens (colors, fonts, gradients, tailwind helpers).",
+  "sideEffects": ["*.css"],
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./tailwind": "./tailwind.js",
+    "./tokens.css": "./tokens.css"
+  },
+  "files": [
+    "index.js",
+    "tailwind.js",
+    "tokens.css",
+    "assets/fonts/ginora_sans",
+    "README.md"
+  ],
+  "scripts": {
+    "release:patch": "npm version patch && git push --follow-tags",
+    "release:minor": "npm version minor && git push --follow-tags",
+    "release:major": "npm version major && git push --follow-tags"
+  }
+}

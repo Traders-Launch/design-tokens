@@ -1,0 +1,35 @@
+export const tailwindTheme = {
+  fontFamily: {
+    tl: ['"Ginóra Sans"', 'Arial', 'sans-serif'],
+    inter: ['"Ginóra Sans"', 'Arial', 'sans-serif'],
+  },
+  textColor: {
+    "custom-color": "var(--tl-blue-dark)",
+  },
+  colors: {
+    background: "var(--background)",
+    foreground: "var(--foreground)",
+    "tl-blue": {
+      dark: "var(--tl-blue-dark)",
+      medium: "var(--tl-blue-medium)",
+      light: "var(--tl-blue-light)",
+    },
+    "tl-blue-dark": "var(--tl-blue-dark)",
+    "tl-blue-medium": "var(--tl-blue-medium)",
+    "tl-blue-light": "var(--tl-blue-light)",
+    "tl-bg": "var(--tl-bg)",
+    "tl-fg": "var(--tl-fg)",
+    "tl-green-cta": "var(--tl-green-cta)",
+    "custom-cyan": "var(--tl-cyan)",
+    "custom-border": "var(--tl-border)",
+    "custom-blue": "var(--tl-blue-overlay)",
+    "modal-blue": "var(--tl-modal)",
+    sidebar: "var(--tl-sidebar)",
+    "light-blue": "var(--tl-blue-medium)",
+    "shinning-blue": "var(--tl-blue-light)",
+  },
+  backgroundImage: {
+    "gradient-text": "linear-gradient(to right, var(--tl-blue-medium), var(--tl-blue-light))",
+    "custom-gradient": "linear-gradient(90deg, var(--tl-blue-dark) 0%, var(--tl-blue-light) 100%)",
+  },
+};

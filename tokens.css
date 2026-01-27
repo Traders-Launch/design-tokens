@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Ginóra Sans";
+  src: url("./assets/fonts/ginora_sans/Ginóra-Sans-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ginóra Sans";
+  src: url("./assets/fonts/ginora_sans/Ginóra-Sans-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --tl-blue-dark: #0a2e6b;
+  --tl-blue-medium: #1d4e9e;
+  --tl-blue-light: #3172d8;
+  --tl-bg: #0a0a0a;
+  --tl-fg: #ededed;
+  --tl-green-cta: #15803d;
+  --tl-cyan: #01ff9d;
+  --tl-border: #3d4054;
+  --tl-blue-overlay: #030c20c4;
+  --tl-modal: #0a0a0a;
+  --tl-sidebar: rgba(0, 0, 0, 0.8);
+  --tl-font: "Ginóra Sans", Arial, Helvetica, sans-serif;
+
+  --tl-gradient-blue-primary: linear-gradient(
+    135deg,
+    var(--tl-blue-dark) 20%,
+    var(--tl-blue-medium) 80%
+  );
+  --tl-gradient-blue-hover: linear-gradient(
+    90deg,
+    var(--tl-blue-medium) 0%,
+    var(--tl-blue-dark) 100%
+  );
+  --tl-gradient-text: linear-gradient(
+    to right,
+    var(--tl-blue-medium),
+    var(--tl-blue-light)
+  );
+  --tl-gradient-hero: linear-gradient(
+    90deg,
+    var(--tl-blue-dark) 0%,
+    var(--tl-blue-light) 100%
+  );
+
+  --background: var(--tl-bg);
+  --foreground: var(--tl-fg);
+}
