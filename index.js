@@ -19,7 +19,10 @@ export const TL_COLORS = {
   text: {
     primary: "#ffffff",
     secondary: "rgba(255, 255, 255, 0.70)",
-    muted: "rgba(255, 255, 255, 0.50)",
+    muted: "#9ca3af",
+    mutedStrong: "#cbd5e1",
+    subtle: "rgba(255, 255, 255, 0.50)",
+    link: "#4f8ef7",
   },
   border: {
     default: "rgba(255, 255, 255, 0.10)",

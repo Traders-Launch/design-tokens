@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TL Design Tokens Preview</title>
+    <style>
+      @import "../tokens.css";
+
+      :root {
+        color-scheme: dark;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--tl-font);
+        background: var(--tl-bg);
+        color: var(--tl-fg);
+      }
+
+      .page {
+        padding: 48px 24px 80px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .hero {
+        display: grid;
+        gap: 12px;
+        margin-bottom: 40px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+        margin: 0;
+      }
+
+      .hero p {
+        color: var(--tl-muted);
+        margin: 0;
+      }
+
+      .section {
+        margin-top: 48px;
+      }
+
+      .section h2 {
+        margin: 0 0 16px;
+        font-size: 24px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .grid.cols-3 {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .grid.cols-2 {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .card {
+        background: rgba(24, 24, 27, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 16px;
+      }
+
+      .swatch {
+        height: 48px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        margin-bottom: 10px;
+      }
+
+      .label {
+        font-size: 13px;
+        color: var(--tl-muted);
+      }
+
+      .value {
+        font-size: 14px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border-radius: 10px;
+        padding: 10px 16px;
+        font-weight: 600;
+        border: 1px solid transparent;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .btn-primary {
+        background: var(--tl-gradient-blue-primary);
+        color: white;
+        box-shadow: 0 8px 20px rgba(29, 78, 158, 0.25);
+      }
+
+      .btn-ghost {
+        border-color: rgba(255, 255, 255, 0.1);
+        color: var(--tl-fg);
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .btn-cta {
+        background: var(--tl-green-cta);
+        color: white;
+        box-shadow: 0 6px 16px rgba(21, 128, 61, 0.35);
+      }
+
+      .input {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(10, 10, 10, 0.6);
+        color: var(--tl-fg);
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--tl-link);
+        background: rgba(79, 142, 247, 0.12);
+      }
+
+      .muted {
+        color: var(--tl-muted);
+      }
+
+      .muted-strong {
+        color: var(--tl-muted-strong);
+      }
+
+      .link {
+        color: var(--tl-link);
+        text-decoration: underline;
+      }
+
+      .before {
+        color: #6b7280;
+      }
+
+      .before-link {
+        color: #1d4e9e;
+        text-decoration: underline;
+      }
+
+      .after {
+        color: var(--tl-muted);
+      }
+
+      .after-link {
+        color: var(--tl-link);
+        text-decoration: underline;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+
+      .table th,
+      .table td {
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .table th {
+        color: var(--tl-muted-strong);
+        text-align: left;
+      }
+
+      .footer-note {
+        margin-top: 32px;
+        font-size: 12px;
+        color: var(--tl-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="hero">
+        <h1>Traders Launch Design System</h1>
+        <p>Unified tokens + contrast‑safe UI examples (dark theme).</p>
+      </div>
+
+      <div class="section">
+        <h2>Core Tokens</h2>
+        <div class="grid cols-3">
+          <div class="card">
+            <div class="swatch" style="background: var(--tl-blue-dark);"></div>
+            <div class="value">TL Blue Dark</div>
+            <div class="label">--tl-blue-dark</div>
+          </div>
+          <div class="card">
+            <div class="swatch" style="background: var(--tl-blue-medium);"></div>
+            <div class="value">TL Blue Medium</div>
+            <div class="label">--tl-blue-medium</div>
+          </div>
+          <div class="card">
+            <div class="swatch" style="background: var(--tl-blue-light);"></div>
+            <div class="value">TL Blue Light</div>
+            <div class="label">--tl-blue-light</div>
+          </div>
+          <div class="card">
+            <div class="swatch" style="background: var(--tl-link);"></div>
+            <div class="value">TL Link</div>
+            <div class="label">--tl-link</div>
+          </div>
+          <div class="card">
+            <div class="swatch" style="background: var(--tl-muted);"></div>
+            <div class="value">TL Muted</div>
+            <div class="label">--tl-muted</div>
+          </div>
+          <div class="card">
+            <div class="swatch" style="background: var(--tl-muted-strong);"></div>
+            <div class="value">TL Muted Strong</div>
+            <div class="label">--tl-muted-strong</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Typography</h2>
+        <div class="card">
+          <div style="font-size: 28px; font-weight: 700;">Heading XL</div>
+          <div style="font-size: 20px; font-weight: 600;" class="muted-strong">Heading L</div>
+          <div style="font-size: 16px;" class="muted">Body text with muted color.</div>
+          <div style="font-size: 12px;" class="muted">Small helper copy.</div>
+          <div style="font-size: 14px;" class="link">Contrast‑safe link</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Buttons & Inputs</h2>
+        <div class="card">
+          <div class="row" style="margin-bottom: 16px;">
+            <a class="btn btn-primary" href="#">Primary Gradient</a>
+            <a class="btn btn-cta" href="#">Primary CTA</a>
+            <a class="btn btn-ghost" href="#">Secondary Ghost</a>
+          </div>
+          <div class="row">
+            <input class="input" placeholder="Email address" />
+            <input class="input" placeholder="Referral code (optional)" />
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Component Samples</h2>
+        <div class="grid cols-2">
+          <div class="card">
+            <div class="badge">Unified Token Badge</div>
+            <h3 style="margin: 12px 0 6px;">Funding Overview</h3>
+            <p class="muted">Daily payouts • No trailing drawdown • 80% split</p>
+            <div style="margin-top: 12px;" class="row">
+              <a class="btn btn-primary" href="#">Start Evaluation</a>
+              <a class="btn btn-ghost" href="#">View Rules</a>
+            </div>
+          </div>
+          <div class="card">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Traders Launch</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="muted">Payout Speed</td>
+                  <td class="link">Same day</td>
+                </tr>
+                <tr>
+                  <td class="muted">Profit Split</td>
+                  <td class="link">80%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Before vs After (Contrast)</h2>
+        <div class="grid cols-2">
+          <div class="card">
+            <h3 style="margin: 0 0 6px;">Before</h3>
+            <p class="before">Helper copy in gray‑500 on dark.</p>
+            <p class="before">As low as <span class="before-link">$49/mo</span></p>
+          </div>
+          <div class="card">
+            <h3 style="margin: 0 0 6px;">After</h3>
+            <p class="after">Helper copy uses contrast‑safe muted token.</p>
+            <p class="after">As low as <span class="after-link">$49/mo</span></p>
+          </div>
+        </div>
+        <div class="footer-note">Tokens live in @traderslaunch/design-tokens. Update once, propagate everywhere.</div>
+      </div>
+    </div>
+  </body>
+</html>
