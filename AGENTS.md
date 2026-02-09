@@ -1,17 +1,30 @@
 # Repository Guidelines
 
+## Purpose & Scope
+
+- Shared TL design tokens (CSS variables + theme helpers). Used across TL web properties.
+- Global surface area: a small token change can ripple across multiple apps.
+
 ## Read First
 
-- Start with `CLAUDE.md` and `README.md` in this repo.
-- Baseline cross-repo rules (Connor ecosystem): `~/personal/life-os/AGENTS.md` (if available).
+- `CLAUDE.md` and `README.md`
+- Connor machine baseline: `~/personal/life-os/AGENTS.md` and `~/.claude/CLAUDE.md`
 
-## Release Safety
+## Safety / Non-Negotiables
 
-- Changes here affect multiple TL web properties. Test in at least one consuming repo before releasing.
-- Releases are git-tag driven. Use `npm run release:*` (pushes tags with `--follow-tags`).
-- No secrets in this repo.
+- Never commit secrets (this repo should not have any).
+- Prefer backwards-compatible changes. Avoid renaming/removing tokens without a coordinated rollout.
 
-## Operating Hygiene
+## Workflow
 
-- Keep changes small and explicit (tokens are global surface area).
+- Branch off `main`. Land via PR into `main`.
+- Releases are git-tag driven via `npm version` and `git push --follow-tags` (see `package.json` scripts).
 
+## Verification (Minimum)
+
+- Test in at least one consuming repo before releasing (e.g. TL-website or user-dashboard).
+- For visual changes, capture a quick before/after screenshot in the consuming app.
+
+## Notes
+
+- Keep changes small and explicit. Tokens are a shared API.
