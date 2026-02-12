@@ -7,7 +7,7 @@ Shared colors, typography, and gradients for TL web properties.
 Recommended (GitHub tag):
 
 ```bash
-npm install --save "github:Traders-Launch/design-tokens#v0.1.0"
+npm install --save "github:Traders-Launch/design-tokens#v0.1.1"
 ```
 
 Local iteration (file dependency):
