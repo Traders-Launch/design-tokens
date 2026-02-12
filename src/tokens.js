@@ -1,0 +1,68 @@
+// Canonical source of truth for Traders Launch design tokens.
+// All distributable artifacts (tokens.css, tailwind.js, index.js) are generated from this file.
+
+export const TL_FONT = '"Ginóra Sans", Arial, Helvetica, sans-serif';
+
+export const TL_COLORS = {
+  blue: {
+    dark: "#0a2e6b",
+    medium: "#1d4e9e",
+    light: "#3172d8",
+  },
+  green: {
+    light: "#16a34a",
+    main: "#15803d",
+    dark: "#166534",
+  },
+  background: {
+    default: "#0a0a0a",
+    paper: "#18181b",
+    elevated: "#27272a",
+  },
+  text: {
+    // Used by CSS `--tl-fg` / `--foreground` in tokens.css (matches TL website foreground).
+    foreground: "#ededed",
+
+    // Used for UI elements that need true white (e.g. button text).
+    primary: "#ffffff",
+    secondary: "rgba(255, 255, 255, 0.70)",
+    muted: "#9ca3af",
+    mutedStrong: "#cbd5e1",
+    subtle: "rgba(255, 255, 255, 0.50)",
+    link: "#4f8ef7",
+  },
+  border: {
+    // Matches existing `--tl-border` in tokens.css (used in some apps as a stronger border).
+    strong: "#3d4054",
+
+    // Matches existing JS theme usage in dashboards.
+    default: "rgba(255, 255, 255, 0.10)",
+    subtle: "rgba(255, 255, 255, 0.05)",
+  },
+  accent: {
+    cyan: "#01ff9d",
+  },
+  overlay: {
+    blue: "#030c20c4",
+  },
+  modal: "#0a0a0a",
+  sidebar: "rgba(0, 0, 0, 0.8)",
+  status: {
+    success: "#22c55e",
+    warning: "#eab308",
+    danger: "#ef4444",
+  },
+};
+
+export const TL_GRADIENTS = {
+  bluePrimary: `linear-gradient(135deg, ${TL_COLORS.blue.dark} 20%, ${TL_COLORS.blue.medium} 80%)`,
+  blueHover: `linear-gradient(90deg, ${TL_COLORS.blue.medium} 0%, ${TL_COLORS.blue.dark} 100%)`,
+  greenCta: `linear-gradient(90deg, ${TL_COLORS.green.light} 0%, ${TL_COLORS.green.main} 50%, ${TL_COLORS.green.light} 100%)`,
+};
+
+export const TL_TOKENS = {
+  font: TL_FONT,
+  colors: TL_COLORS,
+  gradients: TL_GRADIENTS,
+};
+
