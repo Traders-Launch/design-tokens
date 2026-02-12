@@ -1,9 +1,11 @@
 {
   "name": "@traderslaunch/design-tokens",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "description": "Shared Traders Launch design tokens (colors, fonts, gradients, tailwind helpers).",
-  "sideEffects": ["*.css"],
+  "sideEffects": [
+    "*.css"
+  ],
   "main": "./index.js",
   "repository": {
     "type": "git",
