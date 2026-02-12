@@ -10,6 +10,13 @@
 
 Published as `@traderslaunch/design-tokens` (npm/GitHub).
 
+## Verification (Required Before PR)
+
+```bash
+npm install
+npm run check
+```
+
 ```bash
 # Install in consuming repos
 npm install github:Traders-Launch/design-tokens#v0.1.1

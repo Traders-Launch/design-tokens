@@ -22,6 +22,7 @@
 
 ## Verification (Minimum)
 
+- `npm run check` (required before PR)
 - Test in at least one consuming repo before releasing (e.g. TL-website or user-dashboard).
 - For visual changes, capture a quick before/after screenshot in the consuming app.
 

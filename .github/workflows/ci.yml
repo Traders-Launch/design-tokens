@@ -19,5 +19,4 @@ jobs:
           node-version: 20
 
       - name: Validate Generated Artifacts
-        run: npm run validate
-
+        run: npm run check
